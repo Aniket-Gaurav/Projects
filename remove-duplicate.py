@@ -19,7 +19,7 @@ if __name__ == "__main__":
     hashMap = {}
     # List to store deleted files
     deletedFiles = []
-    directory_path = 'Z:/New/Downloads'
+    directory_path = 'Z:/New/Downloads' #user path from where to remove duplicates
     filelist = [os.path.join(directory_path, f) for f in os.listdir(directory_path) if os.path.isfile(os.path.join(directory_path, f))]
 
     for f in filelist:
