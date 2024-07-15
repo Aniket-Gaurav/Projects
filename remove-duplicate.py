@@ -19,12 +19,11 @@ if __name__ == "__main__":
     hashMap = {}
     # List to store deleted files
     deletedFiles = []
-    directory_path = 'W:/New/tportable-x64.4.8.9/Downloads'
+    directory_path = 'Z:/New/Downloads'
     filelist = [os.path.join(directory_path, f) for f in os.listdir(directory_path) if os.path.isfile(os.path.join(directory_path, f))]
 
     for f in filelist:
         key = hashFile(f)
-        # If key already exists, it deletes the file
         if key in hashMap.keys():
             deletedFiles.append(f)
             os.remove(f)
